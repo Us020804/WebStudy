@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0803</title>
+</head>
+<body>
+    <a href="./study0802.html">跳转到0802</a>
+    <br>
+    <a href="https://www.bilibili.com/video/BV1kM4y127Li?spm_id_from=333.788.videopod.episodes&vd_source=6253ce0b4b8369459df27505a2bf2bd8&p=13">跳转到b站学习视频</a>
+    <!-- 超链接 点击当前页面消失，显示跳转到的页面-->
+    <br>
+    <a href="./study0802.html" target="_blank">跳转到0802且当前页面不消失</a>
+    <br>
+    <!-- 若不想当前页面消失 增加属性target="_blank"-->
+    <a href="#">我不会跳转</a>
+    <!-- 当不确定跳转连接，href写#，则不会跳转 -->
+
+    <audio src="./media/唯一-邓紫棋_爱给网_aigei_com.mp3" controls loop autoplay></audio>
+    <!-- 音频标签 controls属性表示加入音频控制面板 loop表示自动循环播放这个歌曲，不加放完就不继续播放-->
+    <!-- autoplay表示自动播放，写了也没有用，因为浏览器一般都会禁用自动播放 -->
+    <!-- 在html5中，属性名和属性值完全一样，可以简写为一个单词，controls="controls"直接简写成controls即可-->
+    <video src="./media/唯一mv.mp4" controls loop muted autoplay></video>
+    <!-- 视频标签 属性controls和loop和音频标签一样 muted表示静音播放，当有muted时autoplay可以生效即静音自动播放-->
+    
+    <!-- 列表 表格 表单 嵌套关系-->   
+    <!-- 列表  l表示列表，u表示无序，o表示有序，d表示定义-->
+    <!-- 无序列表 ul时无序列表 li是列表条目 ul中只能放li 但是li里面什么都可以放-->
+    <ul>
+        <li>句子1</li>
+        <li>句子2</li>
+        <li>句子3</li>
+        <li>
+            <p>段落1</p>
+            <p>段落2</p>
+        </li>
+    </ul>
+    <!-- 有序列表 -->
+    <ol>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ol>
+    <!-- 定义列表 dl嵌套 dt 和 dd,dl是定义列表，dt是定义列表的标题，dd是定义列表的描述/详情，-->
+    <dl>
+        <dt>定义列表标题</dt>
+        <dd>定义列表内容1</dd>
+        <dd>定义列表内容2</dd>
+        <dd>定义列表内容3</dd>
+    </dl>
+    <dl>
+        <dt>定义列表标题2</dt>
+        <dd>定义列表内容4</dd>
+        <dd>定义列表内容5</dd>
+        <dd>定义列表内容6</dd>
+    </dl>
+    <!-- 表格 table 嵌套 tr tr 嵌套 td/th tr是行，th是表头单元格，td是内容单元格-->
+    <table border="1">
+        <!-- border属性值表示边框像素值 -->
+         <thead>
+            <tr>
+            <th>姓名</th>
+            <th>语文</th>
+            <th>数学</th>
+            <th>总分</th>
+            </tr>
+         </thead>
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>99</td>
+                <td>100</td>
+                <td>199</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>52</td>
+                <td>100</td>
+                <td>152</td>
+        </tr> 
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>总结</td>
+                <td>第一</td>
+                <td>第一</td>
+                <td>第一</td>
+            </tr>  
+        </tfoot>
+    </table>
+    <!-- 合并单元格 明确合并的目标
+保留最左最上的单元格，添加属性(取值是数字，表示需要合并的单元格数量
+- 跨行合并，保留最上单元格，添加属性rowspan,跨列合并，保留最左单元格，添加属性 colspan
+删除其他单元格 只能在自己的结构标签thead，tbody，tfoot内合并-->
+      <table border="1">
+        <!-- border属性值表示边框像素值 -->
+         <thead>
+            <tr>
+            <th>姓名</th>
+            <th>语文</th>
+            <th>数学</th>
+            <th>总分</th>
+            </tr>
+         </thead>
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>99</td>
+                <td rowspan="2">100</td>
+                <!-- 2表示合并2个单元格 -->
+                <td>199</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>52</td>
+                <td>152</td>
+        </tr> 
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>总结</td>
+                <td colspan="3">第一</td>
+            </tr>  
+        </tfoot>
+    </table>
+    <!-- 表单 -->
+    文本框<input type="text">
+    <br>
+    密码框<input type="password">
+    <br>
+    单选框<input type="radio">
+    单选框2<input type="radio">
+    <br>
+    多选框<input type="checkbox">
+    <br>
+    上传文件<input type="file">
+</body>
+</html>
