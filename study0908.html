@@ -43,5 +43,40 @@
     <!-- 文本域 多行文本 右下角有拖拽功能，未来会禁用-->
     <br><br><br>
     <textarea>发布你的评论</textarea>
+    <br><br><br>
+    <!-- label标签 是某个标签的说明文本 增大点击范围 点文字也可以选中-->
+    <!-- 写法一 -->
+    <input type="radio" name="gender" id="man">
+    <label for="man">男</label>
+    <input type="radio" name="gender" id="woman">
+    <label for="woman">女</label>
+    <!-- 写法二 -->
+    <label><input type="radio" name="gender2">男</label>
+    <label><input type="radio" name="gender2">女</label>
+    <br><br><br>
+    <form action="">
+        <!-- action是未来发送数据的地址 -->
+        <!-- 按钮  type省略为submit-->
+        用户名：<input type="text" placeholder="请输入用户名">
+        <br>
+        密码：<input type="password" placeholder="请输入密码">
+        <br>
+        <br><br><button type="reset">一键清除</button>
+        <br><button type="submit">登录</button>
+        <br><button type="button">无功能</button>
+    </form>
+   <!-- 布局标签 div大盒子独占一行 span小盒子不换行-->
+   <div>aaaa</div> 
+   <div>bbbb</div>
+   <span>cccccc</span>
+   <span>ddddd</span>
+   <br>
+   <!-- 字符实体 显示预留字符-->
+   <!-- 不用的话多个空格只识别成一个，空格实体 &nbsp  < $-->
+   a            b  c  
+   <br>
+   a&nbsp;&nbsp;b c
+   <!-- 例如想要展示文字<p> -->
+   &lt;p&gt;
 </body>
 </html>
